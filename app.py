@@ -57,8 +57,8 @@ with col1:
               "июля", "августа", "сентября", "октября", "ноября", "декабря"]
     contract_month = st.selectbox(
         "Месяц заключения договора:",
-        months #,
-        # value=datetime.now().month - 1  # текукщий по умолчанию
+        months,
+        index=datetime.now().month - 1  # текущий по умолчанию
     )
     
     # Год
