@@ -49,7 +49,7 @@ with col1:
     # Дата заключения
     contract_day = st.number_input(
         "Дата заключения договора (только две цифры):",
-        min_value=1, max_value=31, datetime.now().day
+        min_value=1, max_value=31, value=datetime.now().day
     )
     
     # Месяц
@@ -58,7 +58,7 @@ with col1:
     contract_month = st.selectbox(
         "Месяц заключения договора:",
         months,
-        datetime.now().month - 1  # текукщий по умолчанию
+        value=datetime.now().month - 1  # текукщий по умолчанию
     )
     
     # Год
