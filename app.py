@@ -49,7 +49,7 @@ with col1:
     # Дата заключения
     contract_day = st.number_input(
         "Дата заключения договора (только две цифры):",
-        min_value=1, max_value=31 #, value=21
+        min_value=1, max_value=31, datetime.now().day
     )
     
     # Месяц
@@ -57,14 +57,14 @@ with col1:
               "июля", "августа", "сентября", "октября", "ноября", "декабря"]
     contract_month = st.selectbox(
         "Месяц заключения договора:",
-        months #,
-        #index=7  # августа по умолчанию
+        months,
+        datetime.now().month - 1  # текукщий по умолчанию
     )
     
     # Год
     contract_year = st.number_input(
         "Год заключения договора (только две цифры):",
-        min_value=20, max_value=99, value=25
+        min_value=20, max_value=99, value=datetime.now().year % 100
     )
     
     # Пациент
